@@ -157,11 +157,14 @@ This technique is inspired by Gumbel-Softmax / concrete distribution literature 
 
 **Training configuration:** CIFAR-10, 30 epochs total (5 warmup + 20 prune + 5 fine-tune), Adam (lr=1e-3), CosineAnnealingLR, batch size 256, gradient clipping 1.0.
 
-| Lambda | Test Accuracy | Sparsity Level (%) | Compression Ratio |
-|:------:|:-------------:|:------------------:|:-----------------:|
-| `1e-5` | ~52–56%       | ~10–25%            | ~1.1–1.3×         |
-| `1e-4` | ~46–51%       | ~50–70%            | ~2.0–3.3×         |
-| `1e-3` | ~35–42%       | ~80–92%            | ~5–12×            |
+══════════════════════════════════════════════════════════════════════
+  Lambda         Test Acc     Sparsity    Compression
+══════════════════════════════════════════════════════════════════════
+  1e-05           30.69%       0.00%         1.00×
+  1e-04           22.79%       0.00%         1.00×
+  1e-03           23.95%       0.00%         1.00×
+══════════════════════════════════════════════════════════════════════
+  Total wall-clock time: 1518.9s
 
 > **Reproducibility note:** Exact values depend on hardware and CUDA non-determinism. Set `SEED = 42` (default) and run `python self_pruning_network.py` to reproduce. Increasing `epochs_prune` to 40+ and `epochs_finetune` to 10+ significantly improves accuracy at all λ levels.
 
