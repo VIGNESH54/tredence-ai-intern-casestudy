@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Key Highlights
+##  Key Highlights
 
 * Implemented a **self-pruning neural network** using learnable gates
 * Designed a **3-phase training pipeline (Warmup → Prune → Fine-tune)**
@@ -16,7 +16,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a **self-pruning neural network** where each weight is controlled by a learnable gate.
 The model attempts to automatically remove unnecessary connections during training while maintaining accuracy.
@@ -111,7 +111,7 @@ Purpose:
   Total wall-clock time: 1518.9s
 ```
 
-### 📊 Interpretation
+###  Interpretation
 
 Across all λ values, **no effective pruning occurred**.
 
@@ -135,7 +135,7 @@ Across all λ values, **no effective pruning occurred**.
 
 ---
 
-## ⚠️ Why Sparsity Failed
+##  Why Sparsity Failed
 
 This is an important insight:
 
@@ -146,7 +146,7 @@ This is an important insight:
 
 ---
 
-## 🔧 Improvements (Future Work)
+##  Improvements (Future Work)
 
 To achieve real pruning:
 
@@ -166,7 +166,7 @@ temp_end = 0.01
 
 ---
 
-## 📉 Expected Gate Distribution
+##  Expected Gate Distribution
 
 Ideal behavior (not achieved here):
 
@@ -176,7 +176,7 @@ Ideal behavior (not achieved here):
 
 ---
 
-## 🧠 Key Learning
+##  Key Learning
 
 This experiment shows:
 
@@ -189,7 +189,7 @@ Even with correct implementation:
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ```bash
 pip install torch torchvision matplotlib numpy
@@ -198,7 +198,7 @@ python self_pruning_network-2.py
 
 ---
 
-## 📁 Outputs
+##  Outputs
 
 * `results_panel.png` → performance visualization
 * `gate_distribution.png` → gate histogram
@@ -206,7 +206,7 @@ python self_pruning_network-2.py
 
 ---
 
-## 📚 References
+##  References
 
 * Tibshirani (1996) — LASSO
 * Han et al. (2015) — Network pruning
@@ -215,7 +215,7 @@ python self_pruning_network-2.py
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 * Successfully implemented a **self-pruning framework**
 * Demonstrated **training pipeline + gating mechanism**
